@@ -1,0 +1,25 @@
+.automatic-carousel-root {
+  width: 100%;
+  margin: auto;
+  cursor: pointer;
+  position: relative !important;
+}
+.automatic-carousel-wrapper {
+  display: flex !important;
+  position: relative !important;
+}
+.automatic-carousel-rtl {
+  direction: rtl !important;
+}
+.automatic-carousel-rtl > div {
+  direction: rtl !important;
+}
+.automatic-carousel-ltr {
+  direction: ltr !important;
+}
+.automatic-carousel-ltr > div {
+  direction: ltr !important;
+}
+.automatic-carousel-root-unselectable {
+  user-select: none;
+}

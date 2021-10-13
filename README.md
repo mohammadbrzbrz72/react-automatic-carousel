@@ -31,6 +31,9 @@ zipped size: <span style='padding-left:30px'>3 kb</span>
 ## Package link:
 
 [github link](https://github.com/mohammadbrzbrz72/react-automatic-carousel)
+
+<br />
+
 [npm link](https://www.npmjs.com/package/react-automatic-carousel)
 
 <br />

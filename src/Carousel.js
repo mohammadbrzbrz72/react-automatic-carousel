@@ -1,4 +1,5 @@
 import React, { useCallback, useState, useEffect, Fragment } from "react";
+import Proptypes from "prop-types";
 
 import { useRefStore } from "./hooks/useRefStore.js";
 import useOffsetEffect from "./hooks/useOffsetEffect.js";
@@ -23,16 +24,16 @@ import "./style/automaticCarousel.css";
 export function AutomaticCarousel({
   className,
   offUserSelect,
-  speeds, // touch | mouse swiple | mouse wheels
+  speeds,
   swipeable,
-  dir, // top, right , bottom, left
+  dir,
   transition,
   moveDirection,
   children,
   movesInfo,
-  defaultIndex, // set current item by index
+  defaultIndex,
   moveTo,
-  Button = Fragment,
+  Button,
 }) {
   const rootClass = clsx(
     "automatic-carousel-root",
@@ -173,7 +174,74 @@ AutomaticCarousel.defaultProps = {
   offUserSelect: true,
   dir: "left",
   swipeable: true,
-  overflow: "normal", // normal | dropdown
-  transition: 200, // number or false
-  moveDirection: "reverse", // reverse | forward
+  overflow: "normal",
+  transition: 200,
+  moveDirection: "reverse",
+  Button: Fragment,
+};
+
+AutomaticCarousel.propTypes = {
+  /**
+   * root class name
+   * default: ''
+   */
+  className: Proptypes.string,
+  /**
+   * remove text markup
+   * default: true
+   */
+  offUserSelect: Proptypes.bool,
+  /**
+   * speed of user touch or mouse movment
+   * default: { touch: 2, mouse: 3 }
+   */
+  speeds: Proptypes.object,
+  /**
+   * swipeable carousel or work with buttons
+   * default: true
+   */
+  swipeable: Proptypes.bool,
+  /**
+   * specify your carousel direction:
+   * {
+   *   'left',  // ltr (english, )
+   *   'right', // rtl (Persian/Farsi, Arabic, Kurdish, Azeri, ...)
+   *   'top',
+   *   'bottom',
+   * }
+   * default: 'left'
+   */
+  dir: Proptypes.oneOf("left", "right", "top", "bottom"),
+  /**
+   * move transition by millisecond
+   * default: 200
+   */
+  transition: Proptypes.number,
+  /**
+   * carousel move direction by user swipeable
+   * defaut: 'reverse'  // reverse | forward
+   */
+  moveDirection: Proptypes.oneOf(["reverse", "forward"]),
+  /**
+   * children wrap with this package
+   */
+  children: Proptypes.node,
+  /**
+   * get active index and buttons mode
+   * activeIndex disableButton
+   * send ref as props in movesInfo property
+   */
+  movesInfo: Proptypes.object,
+  /**
+   * set default item by index
+   */
+  defaultIndex: Proptypes.number,
+  /**
+   * change active item by custom buttons or dots , ...
+   */
+  moveTo: Proptypes.func,
+  /**
+   * you can use carousel Button with set element name like 'div' or 'button', ...
+   */
+  Button: Fragment,
 };

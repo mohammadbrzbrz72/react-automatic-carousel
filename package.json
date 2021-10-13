@@ -2,8 +2,8 @@
   "name": "react-automatic-carousel",
   "version": "1.0.0",
   "author": "mohammad barzegar",
-  "description": "",
-  "repository": "mohammadbrzbrz72/switch-multi-button",
+  "description": "react carousel package. set css to use different size in multiple devices",
+  "repository": "mohammadbrzbrz72/react-automatic-carousel",
   "main": "dist/index.min.js",
   "module": "dist/index.es.min.js",
   "source": "src/index.js",
@@ -55,8 +55,5 @@
   "engines": {
     "node": ">=10.0.0"
   },
-  "dependencies": {
-    "remove": "^0.1.5",
-    "slider": "^1.0.4"
-  }
+  "dependencies": {}
 }

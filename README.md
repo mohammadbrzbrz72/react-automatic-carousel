@@ -25,8 +25,6 @@ zipped size: <span style='padding-left:30px'>3 kb</span>
 
 <br />
 <br />
-<br />
-<br />
 
 ## Package link:
 
@@ -123,6 +121,8 @@ import { AutomaticCarousel } from "react-automatic-carouse";
 }
 ```
 
+#
+
 <br /><br /><br />
 
 **With package Buttom**
@@ -161,6 +161,8 @@ function Button({ prev, next }) {
   );
 }
 ```
+
+#
 
 <br />
 
@@ -221,6 +223,8 @@ function ButtonOrDotOrAny({ moveTo }) {
 }
 ```
 
+#
+
 <br />
 
 **Rtl languages (persian, arabic, ...)**:
@@ -234,7 +238,11 @@ function ButtonOrDotOrAny({ moveTo }) {
 </AutomaticCarousel>
 ```
 
+#
+
 <br />
+
+**Vertical mode (top to bottom or bottom to top)**:
 
 ```jsx
 <AutomaticCarousel
@@ -289,6 +297,8 @@ function ButtonOrDotOrAny({ moveTo }) {
   }
 }
 ```
+
+#
 
 <br /><br /><br />
 
